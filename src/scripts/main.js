@@ -6,12 +6,12 @@ function parsePopulation(text) {
 
 const populationElements = document.querySelectorAll('.population');
 
-const populatinNumbers = Array.from(populationElements)
+const populationNumbers = Array.from(populationElements)
   .map((el) => parsePopulation(el.textContent))
   .filter((num) => !isNaN(num));
 
-const total = populatinNumbers.reduce((sum, num) => sum + num, 0);
-const average = total / populatinNumbers.length;
+const total = populationNumbers.reduce((sum, num) => sum + num, 0);
+const average = total / populationNumbers.length;
 
 const totalElement = document.querySelector('.total-population');
 const averageElement = document.querySelector('.average-population');
